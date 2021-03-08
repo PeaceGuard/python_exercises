@@ -8,7 +8,6 @@ sum = 0
 # use while loop to iterate downwards from 'number' until zero
 
 while (number > 0):
-    
     sum += number
     number -= 1
 print("The sum of first 100 natural numbers is",sum,".")
