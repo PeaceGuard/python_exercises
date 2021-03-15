@@ -1,25 +1,46 @@
 #! /usr/bin/env python3
 
-# Sum of first 100 natural numbers divisible by x divisor value provided by the user
+# Sum of first 100 natural numbers divisible by x divisor value provided by the user, using 'while'
 
-print("Please provide a DIVISOR value (natural number) for which you'd like to see a sum of first 100 divisible natural numbers.")
+divisor = 0
+while True:
+    try:
+        divisor = int(input("Enter a positive value: "))
+    except ValueError:
+        print("Non-integer value entered by the user, try again...")
+        continue
+    if divisor < 1:
+        print("Non-positive value entered by the user, try again...")
+        continue
+    break
 
-x = int(input())
-number = 100 * x
-sum = 0
+total = 0
+number = divisor
+i = 1
 
-# use while loop to iterate downwards from 'number' until zero & if to sum only numbers divisible by x
+while i <= 100:
+    total += number
+    number += divisor
+    i += 1
 
-if x <= 0:
-    while(x <= 0):
-        print("Enter a natural number > 0.")
-        x = int(input())
-else:
-    while(number > 0):
-        if number % x == 0:
-            sum += number
-            number -= 1
-        else:
-            sum = sum
-            number -= 1
-    print("The sum of first 100 natural numbers divisible by", x, "is",sum,".")
+print("While: The sum of first 100 natural numbers divisible by", divisor, "is " + str(total) + ".")
+
+# Sum of first 100 natural numbers divisible by x divisor value provided by the user, using 'for'
+
+tot = 0
+increm = divisor
+
+for i in range(0, 100):
+    tot += increm
+    increm += divisor
+
+
+#tot = 0
+#for num in range(1, divisor * 100 + 1):
+#    if num % divisor == 0:
+#        tot += num
+
+print("For: The sum of first 100 natural numbers divisible by " + str(divisor) + " is " + str(tot) + ".")
+
+# While oraz for do przepisania w wersji bez else, continue i break
+# Dwie wersje: zaczynająca od 7 oraz inna
