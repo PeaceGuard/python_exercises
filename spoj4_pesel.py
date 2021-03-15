@@ -2,7 +2,7 @@
 
 # Spoj task #4 - PESEL: https://pl.spoj.com/problems/JPESEL/
 
-print("Please provide the number of tests")
+#print("Please provide the number of tests")
 t = int(input())
 table = []
 total = 0
