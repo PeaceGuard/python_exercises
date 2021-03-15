@@ -2,13 +2,12 @@
 
 # Spoj task #2 - POŁOWA: https://pl.spoj.com/problems/POL/
 
-print("Please provide the number of tests")
 t = int(input())
 table = []
 
 for num in range (0, t):
     table += list(str.split(input()))
-print(table)
+#print(table)
 
 half = ""
 x = 0
