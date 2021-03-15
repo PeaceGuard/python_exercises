@@ -3,16 +3,24 @@
 import sys
 
 result = 0
-n_num = int(sys.argv[1])
+n = int(sys.argv[1])
 
-def fibonacci(digit):
-    if digit > 1:
-        result = fibonacci(digit - 1) + fibonacci(digit - 2)
-#        print(result) - why?
+def fibonacci_recur(digit):
+    if digit == 0:
+        result = 0
     elif digit == 1:
         result = 1
-    elif digit == 0:
-        result = 0
+    elif digit > 1:
+        result = fibonacci_recur(digit - 1) + fibonacci_recur(digit - 2)
     return result
 
-print(fibonacci(n_num))
+def fibonacci_iter(digit):
+    a = 0
+    b = 1
+    for elem in range(0, digit):
+        a, b = b, a + b
+    return a
+
+print(fibonacci_recur(n))
+
+print(fibonacci_iter(n))
