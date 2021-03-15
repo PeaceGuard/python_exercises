@@ -16,14 +16,14 @@ for elem in range (1, int(digit_number) + 1):
     else:
         print(elem)
 
-#fizz = []
-#buzz = []
-#fizz_buzz = []
-#fizzbuzz_count = len(fizz) + len(buzz) + len(fizz_buzz)
 
-# use while loop to iterate 100 numbers; if to divide numbers into corresponding lists & len to count them
 
-#while (fizzbuzz_count < 100):
+# fizz = []
+# buzz = []
+# fizz_buzz = []
+# fizzbuzz_count = len(fizz) + len(buzz) + len(fizz_buzz)
+
+# while (fizzbuzz_count < 100):
 #    if number % 3 == 0 and number % 5 != 0:
 #        fizz.append(number)
 #        number += 1
@@ -39,7 +39,7 @@ for elem in range (1, int(digit_number) + 1):
 #    else:
 #        number += 1
 #        fizzbuzz_count = len(fizz) + len(buzz) + len(fizz_buzz)
-#print (fizz)
-#print (buzz)
-#print (fizz_buzz)
-#print (fizzbuzz_count)
+# print (fizz)
+# print (buzz)
+# print (fizz_buzz)
+# print (fizzbuzz_count)
