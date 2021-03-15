@@ -14,3 +14,10 @@ print(table)
 for elem in table:
     total += int(elem)
 print(total)
+
+d = {
+    "key": "value",
+    "other": "special",
+    "num": 789
+}
+
