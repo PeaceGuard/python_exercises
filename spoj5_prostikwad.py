@@ -3,7 +3,7 @@
 # Spoj task #5 - Prostokąty i Kwadraty: https://pl.spoj.com/problems/FR_12_05/
 
 while True:
-    lst = str.split(input())
+    lst = input().split()
     try:
         a = int(lst[0])
     except ValueError:
@@ -14,11 +14,11 @@ while True:
     except IndexError:
         print("Please provide two values")
         continue
-    big_sq_area = a ** 2
-    if a >= b or a < 1 or b < 1 or a > (10 ** 4) or b > (10 ** 4):
+    if a >= b or a < 1 or b < 1 or a > 10000 or b > 10000:
         print ('Please provide input in format "a b", where both numbers are natural and meet 1 ≤ a < b ≤ 10⁴ condition')
         continue
-    elif b <= 2 * a:
+    big_sq_area = a ** 2
+    if b <= 2 * a:
         side_diff = b - a
         small_sq_area = side_diff ** 2
         break
