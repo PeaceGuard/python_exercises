@@ -18,3 +18,5 @@ for elem in lst[2:num_count]:
     lst2.pop(0)
 
 print(count)
+
+# Search for Python queue structure and try using it ; lst2 --> sliding_window
