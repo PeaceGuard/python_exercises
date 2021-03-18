@@ -1,32 +1,33 @@
 #! /usr/bin/env python3
 
-# Spoj task #3 - CALC: https://pl.spoj.com/problems/CALC/
+# Spoj task #3 - CALC: https://pl.spoj.com/problems/CALC/ - not uploaded (reading from file)
 
-file = open("./it/git/python_projects/calc", "r")
-text = file.read()
-file.close()
+input_file = open("/home/marek-stoppel/it/git/python_projects/calc", "r")
+text = input_file.read()
+input_file.close()
 
-table = list(text.split("\n"))
-lines = len(text.splitlines())
-table.pop(lines)
+list_calculations = list(text.split("\n"))
+nr_lines = len(text.splitlines())
+print(list_calculations)
+list_calculations.pop(nr_lines)
 result = 0
 
-for elem in table:
-    table2 = list(elem.split(" "))
-    if table2[0] == "+":
-        result = int(table2[1]) + int(table2[2])
+for element in list_calculations:
+    calculation = list(element.split(" "))
+    if calculation[0] == "+":
+        result = int(calculation[1]) + int(calculation[2])
         print(result)
-    elif table2[0] == "-":
-        result = int(table2[1]) - int(table2[2])
+    elif calculation[0] == "-":
+        result = int(calculation[1]) - int(calculation[2])
         print(result)
-    elif table2[0] == "*":
-        result = int(table2[1]) * int(table2[2])
+    elif calculation[0] == "*":
+        result = int(calculation[1]) * int(calculation[2])
         print(result)
-    elif table2[0] == "/":
-        result = int(table2[1]) // int(table2[2])
+    elif calculation[0] == "/":
+        result = int(calculation[1]) // int(calculation[2])
         print(result)
-    elif table2[0] == "%":
-        result = int(table2[1]) % int(table2[2])
+    elif calculation[0] == "%":
+        result = int(calculation[1]) % int(calculation[2])
         print(result)
     else:
         print("unrecognized arithmetic operator")

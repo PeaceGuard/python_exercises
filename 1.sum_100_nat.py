@@ -8,6 +8,7 @@ total = 0
 while number <= 100:
     total += number
     number += 1
+
 print("While: The sum of first 100 natural numbers is " + str(total) + ".")
 
 # Sum of first 100 natural numbers, using 'for'
@@ -16,8 +17,8 @@ tot = 0
 
 for num in range(1, 101):
     tot += num
-print("For: The sum of first 100 natural numbers is " + str(tot) + ".")
 
+print("For: The sum of first 100 natural numbers is " + str(tot) + ".")
 
 
 #   Different ways to use print function:

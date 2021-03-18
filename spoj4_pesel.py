@@ -1,30 +1,31 @@
 #! /usr/bin/env python3
 
-# Spoj task #4 - PESEL: https://pl.spoj.com/problems/JPESEL/
+# Spoj task #4 - PESEL: https://pl.spoj.com/problems/JPESEL/ - Accepted
 
-#print("Please provide the number of tests")
 t = int(input())
-table = []
-total = 0
+#"Enter the number of tests: "
+
 result = []
 
-for num in range (0, t):
-    table = list(input())
-    table[0] = int(table [0])
-    table[1] = int(table [1]) * 3
-    table[2] = int(table [2]) * 7
-    table[3] = int(table [3]) * 9
-    table[4] = int(table [4])
-    table[5] = int(table [5]) * 3
-    table[6] = int(table [6]) * 7
-    table[7] = int(table [7]) * 9
-    table[8] = int(table [8])
-    table[9] = int(table [9]) * 3
-    table[10] = int(table [10])
-    total = sum(table)
+for i in range (0, t):
+    pesel = list(input())
+    #"Enter the Pesel number to check: "
+    pesel[0] = int(pesel [0])
+    pesel[1] = int(pesel [1]) * 3
+    pesel[2] = int(pesel [2]) * 7
+    pesel[3] = int(pesel [3]) * 9
+    pesel[4] = int(pesel [4])
+    pesel[5] = int(pesel [5]) * 3
+    pesel[6] = int(pesel [6]) * 7
+    pesel[7] = int(pesel [7]) * 9
+    pesel[8] = int(pesel [8])
+    pesel[9] = int(pesel [9]) * 3
+    pesel[10] = int(pesel [10])
+    total = sum(pesel)
     if total % 10 == 0:
         result += "D"
     else:
         result += "N"
-for elem in result:
-    print(elem)
+
+for element in result:
+    print(element)

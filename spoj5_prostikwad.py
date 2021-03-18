@@ -1,30 +1,32 @@
 #! /usr/bin/env python3
 
-# Spoj task #5 - Prostokąty i Kwadraty: https://pl.spoj.com/problems/FR_12_05/
+# Spoj task #5 - Prostokąty i Kwadraty: https://pl.spoj.com/problems/FR_12_05/ - Accepted
 
 while True:
-    lst = input().split()
     try:
-        a = int(lst[0])
+        side_lengths = input().split()
+        #"Enter two integers separated by space, for a and b rectangle side lengths: "
+        a = int(side_lengths[0])
+        b = int(side_lengths[1])
     except ValueError:
-        print("Please provide a numerical value")
+        print("Non-integer value entered")
         continue
-    try:
-        b = int(lst[1])
     except IndexError:
-        print("Please provide two values")
+        print("Enter two positive integers separated by space")
         continue
     if a >= b or a < 1 or b < 1 or a > 10000 or b > 10000:
-        print ('Please provide input in format "a b", where both numbers are natural and meet 1 ≤ a < b ≤ 10⁴ condition')
+        print('Please provide input in format "a b", where both numbers are natural and meet 1 ≤ a < b ≤ 10⁴ condition')
         continue
-    big_sq_area = a ** 2
-    if b <= 2 * a:
-        side_diff = b - a
-        small_sq_area = side_diff ** 2
-        break
     else:
-        small_sq_area = a ** 2
         break
+
+big_sq_area = a ** 2
+
+if b <= 2 * a:
+    side_diff = b - a
+    small_sq_area = side_diff ** 2
+else:
+    small_sq_area = a ** 2
 
 total_area = big_sq_area + small_sq_area
 print(total_area)

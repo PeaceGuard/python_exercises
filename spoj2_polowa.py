@@ -1,21 +1,18 @@
 #! /usr/bin/env python3
 
-# Spoj task #2 - POŁOWA: https://pl.spoj.com/problems/POL/
+# Spoj task #2 - POŁOWA: https://pl.spoj.com/problems/POL/ - Accepted
 
 t = int(input())
-table = []
+#"Enter the number of tests: "
+words = []
 
-for num in range (0, t):
-    table += list(str.split(input()))
-#print(table)
+for i in range (0, t):
+    words += list(input().split())
+    #"Enter a word to halve: "
 
-half = ""
-x = 0
-y = ""
-
-for elem in table:
-    half = int(len(elem)/2)
-    for x in range(0,half):
-        y += elem[x]
-    print(y)
-    y = ""
+for element in words:
+    half_word = ""
+    half_length = int(len(element) / 2)
+    for j in range(0, half_length):
+        half_word += element[j]
+    print(half_word)

@@ -42,5 +42,3 @@ tot2 = 0
 for num2 in range(7, 701, 7):
     tot2 += num2
 print("For#2: The sum of first 100 natural numbers divisible by 7 is " + str(tot2) + ".")
-
-# Warunek pętli ma być zdefiniowany przez sumę 100 liczb + jeszcze coś do usunięcia (else & continue w for-if?)

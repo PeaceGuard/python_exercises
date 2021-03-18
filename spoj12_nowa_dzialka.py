@@ -1,38 +1,41 @@
 #! /usr/bin/env python3
 
-# Spoj task #12 - Nowa działka: https://pl.spoj.com/problems/MWPZ06X/
+# Spoj task #12 - Nowa działka: https://pl.spoj.com/problems/MWPZ06X/ - Accepted
+
+import math
 
 while True:
     try:
         test_num = int(input())
-        if test_num < 1 or test_num > 500:
-            print("D value should be not lower than 1 and not higher than 500")
-            continue
+        #"Enter the number of tests: "
     except ValueError:
-        print("D value should be a natural number")
+        print("Enter an integer value")
         continue
-    else:
-        lst = []
-        for elem in range(0, test_num):
-            while True:
-                try:
-                    side = int(input())
-                    if side < 1 or side > 1000:
-                        print("X value should be not lower than 1 and not higher than 1000")
-                        continue
-                    else:
-                        area = side ** 2
-                        lst.append(area)
-                except ValueError:
-                    print("X value should be a natural number")
-                    continue
-                break
+    if test_num < 1 or test_num > 500:
+        print("Enter an integer between 1 and 500")
+        continue
     break
 
-for component in lst:
-    print(component)
+area_list = []
 
-#test_num = int(input())
+for i in range(0, test_num):
+    while True:
+        try:
+            side_length = int(input())
+            #"Enter the steps number: "
+        except ValueError:
+            print("Steps number should be an integer")
+            continue
+        if side_length < 1 or side_length > 1000:
+            print("Enter the steps number between 1 and 1000")
+            continue
+        else:
+            area = int(math.pow(side_length, 2))
+            area_list.append(area)
+        break
+
+for element in area_list:
+    print(element)
 
 #for elem in range(0, test_num):
 #    side = int(input())

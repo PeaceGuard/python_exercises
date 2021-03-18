@@ -2,7 +2,6 @@
 
 # Sum of first 100 natural numbers divisible by x divisor value provided by the user, using 'while'
 
-divisor = 0
 while True:
     try:
         divisor = int(input("Enter a positive value: "))
@@ -34,13 +33,9 @@ for i in range(0, 100):
     tot += increm
     increm += divisor
 
-
 #tot = 0
 #for num in range(1, divisor * 100 + 1):
 #    if num % divisor == 0:
 #        tot += num
 
 print("For: The sum of first 100 natural numbers divisible by " + str(divisor) + " is " + str(tot) + ".")
-
-# While oraz for do przepisania w wersji bez else, continue i break
-# Dwie wersje: zaczynająca od 7 oraz inna

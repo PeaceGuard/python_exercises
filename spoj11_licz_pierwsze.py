@@ -1,30 +1,30 @@
 #! /usr/bin/env python3
 
-# Spoj task #11 - Liczby pierwsze: https://pl.spoj.com/problems/PRIME_T/
+# Spoj task #11 - Liczby pierwsze: https://pl.spoj.com/problems/PRIME_T/ - Accepted
 
 import math
 
 test_num = int(input())
-lst = []
+result_list = []
 
-for elem in range(0, test_num):
+for i in range(0, test_num):
     number = int(input())
     divisor = 2
-    num_sq = math.sqrt(number)
-    while (divisor <= num_sq):
+    number_sq = math.sqrt(number)
+    while (divisor <= number_sq):
         if number % divisor == 0:
-            lst.append("NIE")
+            result_list.append("NIE")
             break
         else:
             divisor += 1
     if number == 1:
-        lst.append("NIE")
+        result_list.append("NIE")
         continue
-    if divisor > num_sq:
-        lst.append("TAK")
+    if divisor > number_sq:
+        result_list.append("TAK")
 
-for component in lst:
-    print(component)
+for element in result_list:
+    print(element)
 
 #test_num = int(input())
 

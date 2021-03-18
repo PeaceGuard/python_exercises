@@ -17,7 +17,6 @@ for elem in range (1, int(digit_number) + 1):
         print(elem)
 
 
-
 # fizz = []
 # buzz = []
 # fizz_buzz = []
